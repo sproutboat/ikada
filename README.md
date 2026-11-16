@@ -35,7 +35,7 @@ import { colors, typeScale } from "@sproutboat/ikada/tokens";
 
 The package is compiled ESM with types and declaration maps. Client modules keep `"use client"`, so Server Components in Next.js can render them (pass serializable props). No `transpilePackages` and no manual `@source`. Upgrading from 0.1.0: see [CHANGELOG.md](CHANGELOG.md).
 
-See [DESIGN.md](https://github.com/baronunread/ikada/blob/main/DESIGN.md) for the principles and [INVENTORY.md](https://github.com/baronunread/ikada/blob/main/INVENTORY.md) for every component and its status.
+See [DESIGN.md](https://github.com/sproutboat/ikada/blob/main/DESIGN.md) for the principles and [INVENTORY.md](https://github.com/sproutboat/ikada/blob/main/INVENTORY.md) for every component and its status.
 
 ## Develop
 
@@ -62,7 +62,7 @@ git tag -a v0.2.0 -m v0.2.0 && git push origin v0.2.0
 
 The `publish` workflow checks that the tag matches the version, runs the checks and publishes to npm with provenance over Trusted Publishing (OIDC, no token). The trusted-publisher settings are the `fledgling` block in `package.json`.
 
-The package began as `packages/ikada` in [baronunread/sproutboat](https://github.com/baronunread/sproutboat); its history was carried over.
+The package began as `packages/ikada` in [sproutboat/sproutboat](https://github.com/sproutboat/sproutboat); its history was carried over.
 
 Docs, live examples and a shadcn registry live at [sproutboat.com/ikada](https://sproutboat.com/ikada) (source in [`site/`](site/README.md)):
 

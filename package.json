@@ -16,11 +16,11 @@
     "tokens"
   ],
   "homepage": "https://sproutboat.com/ikada",
-  "bugs": "https://github.com/baronunread/ikada/issues",
+  "bugs": "https://github.com/sproutboat/ikada/issues",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/baronunread/ikada.git"
+    "url": "git+https://github.com/sproutboat/ikada.git"
   },
   "workspaces": [
     "site"

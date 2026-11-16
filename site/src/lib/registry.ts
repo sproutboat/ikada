@@ -49,7 +49,7 @@ export const components = items
   .sort((a, b) => a.title.localeCompare(b.title));
 
 export const REGISTRY_URL = "https://sproutboat.com/ikada/r";
-export const REPO_URL = "https://github.com/baronunread/ikada";
+export const REPO_URL = "https://github.com/sproutboat/ikada";
 
 /** The dashboard blocks (registry:block), one page each under /blocks. */
 export const blocks = items.filter((i) => i.type === "registry:block").sort((a, b) => a.title.localeCompare(b.title));
