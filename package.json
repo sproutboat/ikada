@@ -1,6 +1,6 @@
 {
   "name": "@sproutboat/ikada",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Sproutboat design system: tokens and React components on Base UI and Tailwind v4. Compiled ESM, shadcn registry, light by default with a .dark class.",
   "keywords": [
     "base-ui",
