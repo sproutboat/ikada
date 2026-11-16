@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+## 0.3.0
+
+The repository moved to [sproutboat/ikada](https://github.com/sproutboat/ikada); the package is published from there with provenance.
 
 ### Fixed
 
