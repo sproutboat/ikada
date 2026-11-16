@@ -6,7 +6,7 @@ Sprout Harbour, and ikada is a small raft moored at the harbour's mouth. Monolin
 and no secure context. Dark and light follow the Sproutboat tokens: the deepest water is the page's canvas colour, so
 the sheet sits on the page with no seam.
 
-**Source of truth: this folder** (`baronunread/ikada`, `site/src/hero/chart/`). Other sites vendor a copy:
+**Source of truth: this folder** (`sproutboat/ikada`, `site/src/hero/chart/`). Other sites vendor a copy:
 
 ```sh
 bun <ikada>/site/scripts/sync-chart.ts web/src/hero/chart           # copy + VENDORED (version, commit)

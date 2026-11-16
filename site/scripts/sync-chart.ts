@@ -47,7 +47,7 @@ const dirty = (await $`git -C ${src} status --porcelain -- .`.quiet().nothrow())
   : "";
 writeFileSync(
   join(dest, "VENDORED"),
-  `Nautical chart ${version}, copied from baronunread/ikada site/src/hero/chart at ${commit}${dirty}.\n` +
+  `Nautical chart ${version}, copied from sproutboat/ikada site/src/hero/chart at ${commit}${dirty}.\n` +
     `Do not edit here: change the source in ikada and run site/scripts/sync-chart.ts.\n`,
 );
 console.log(`chart ${version} (${commit}${dirty}) -> ${dest}: ${FILES.join(", ")}, VENDORED`);

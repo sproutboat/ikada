@@ -11,6 +11,8 @@ name: publish
 # Auth is npm Trusted Publishing (OIDC): no NPM_TOKEN. The trusted-publisher settings live in the
 # "fledgling" block of package.json and are applied to npm with `npx fledgling sync`
 # (first time: `npm login`, then `npx fledgling --yes`, which also claims the package name).
+# npm matches the config on owner + repo + workflow file, case-sensitive: sproutboat / ikada / publish.yml.
+# After a repo move, `package.json` repository.url must match too, and the trusted-publisher config must be re-created.
 on:
   push:
     tags: ["v*"]
@@ -22,7 +24,7 @@ permissions:
 
 jobs:
   publish:
-    if: github.repository == 'baronunread/ikada'
+    if: github.repository == 'sproutboat/ikada'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

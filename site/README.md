@@ -16,7 +16,7 @@ bun run preview             # serve dist/ like the asset server, 0.0.0.0:4410
 
 `bun run deploy:cloud` (`cloud/deploy.sh`) builds `dist/`, uploads it to the Cloud's asset store and has the Cloud's own builder compile the
 redirect module from `cloud/src/sprout.js` (`sbcloud-deploy --from-source`), routed at `sproutboat.com/ikada`. The Cloud keeps the source of what
-runs, so a generation swap prebuilds the app for the next runtime like any other (sproutboat-cloud `docs/swap.md`). The operator token and the
+runs, so a generation swap prebuilds the app for the next runtime like any other (`docs/swap.md` in sproutboat/cloud). The operator token and the
 API tunnel are described in the header of `cloud/deploy.sh`; the module config in `cloud/sproutboat.jsonc` differs from `sproutboat.jsonc` only in
 its empty assets directory (the Cloud edge serves the pages, they are not baked into the module).
 
@@ -66,9 +66,9 @@ binding: the sproutboat.com sprout sends `/ikada` and `/ikada/*` to `env.IKADA.f
 bun run deploy              # build + bunx sproutboat deploy, from site/
 ```
 
-Why a separate app and a binding instead of copying the build into sproutboat-site: ikada's docs then ship with
+Why a separate app and a binding instead of copying the build into sproutboat/site: ikada's docs then ship with
 ikada. A release, a new component or a registry change deploys from this repo alone, and sproutboat.com changed once
-(the binding and one route) and never rebuilds for it. Copying the build into sproutboat-site would make every docs
+(the binding and one route) and never rebuilds for it. Copying the build into sproutboat/site would make every docs
 update a sproutboat.com deploy and make that build fetch and build a second repo.
 
 Deploy order the first time: `ikada-site` first, then sproutboat.com with the binding. A binding to a project that

@@ -1,6 +1,6 @@
 # AGENTS.md
 
-`@sproutboat/ikada` (raft): the Sproutboat design system. TypeScript source only, no build step. Consumed by the Community dashboard (baronunread/sproutboat, `apps/web`) and the Cloud dashboard.
+`@sproutboat/ikada` (raft): the Sproutboat design system. TypeScript source only, no build step. Consumed by the Community dashboard (sproutboat/sproutboat, `apps/web`) and the Cloud dashboard.
 
 ## Commands
 

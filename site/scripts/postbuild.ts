@@ -86,7 +86,7 @@ const llms = [
   "## Optional",
   `- [Everything in one file](${BASE}/llms-full.txt): the markdown of every page above`,
   "- [npm package](https://www.npmjs.com/package/@sproutboat/ikada)",
-  "- [Source on GitHub](https://github.com/baronunread/ikada)",
+  "- [Source on GitHub](https://github.com/sproutboat/ikada)",
   "",
 ].join("\n");
 writeFileSync(join(out, "llms.txt"), llms);

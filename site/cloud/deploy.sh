@@ -12,7 +12,7 @@
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 TOOL=${SBCLOUD_DEPLOY:-../../sproutboat-cloud/tools/sbcloud-deploy}
-[ -x "$TOOL" ] || { echo "deploy: $TOOL not found: check out sproutboat-cloud next to this repo or set SBCLOUD_DEPLOY" >&2; exit 1; }
+[ -x "$TOOL" ] || { echo "deploy: $TOOL not found: check out sproutboat/cloud next to this repo (directory sproutboat-cloud) or set SBCLOUD_DEPLOY" >&2; exit 1; }
 [ -n "${SBCLOUD_TOKEN:-}" ] || { echo "deploy: SBCLOUD_TOKEN is not set (the owner token of the Cloud on othello; see the header of this file)" >&2; exit 1; }
 [ -s dist/ikada/index.html ] || { echo "deploy: dist/ikada is empty: run 'bun run build' first" >&2; exit 1; }
 extra=()
