@@ -14,11 +14,11 @@ bun run preview             # serve dist/ like the asset server, 0.0.0.0:4410
 
 ## Deploying to the Sproutboat Cloud
 
-`bun run deploy:cloud` (`cloud/deploy.sh`) builds `dist/`, uploads it to the Cloud's asset store and has the Cloud's own builder compile the
-redirect module from `cloud/src/sprout.js` (`sbcloud-deploy --from-source`), routed at `sproutboat.com/ikada`. The Cloud keeps the source of what
-runs, so a generation swap prebuilds the app for the next runtime like any other (`docs/swap.md` in sproutboat/cloud). The operator token and the
-API tunnel are described in the header of `cloud/deploy.sh`; the module config in `cloud/sproutboat.jsonc` differs from `sproutboat.jsonc` only in
-its empty assets directory (the Cloud edge serves the pages, they are not baked into the module).
+The site is the `ikada-site` app of the `sproutboat` team, served at `sproutboat.com/ikada`. `bun run deploy` builds `dist/` and runs `sproutboat deploy`
+(`sproutboat.jsonc` is the only config) with a team key in `SPROUTBOAT_API_TOKEN`: the CLI uploads the source of the redirect module (`src/sprout.js`) for the
+Cloud's own builder to compile, and `dist/` to the Cloud's asset store, where the edge serves it (the pages are not part of the module). The Cloud keeps
+the source of what runs, so a generation swap prebuilds the app for the next runtime like any other (`docs/swap.md` in sproutboat/cloud). The route
+`sproutboat.com/ikada` and the limits (`memory_mb` 64, `wall_ms` 10000) are set on the app once and kept by every deploy.
 
 ## Layout
 
