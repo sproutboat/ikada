@@ -7,6 +7,8 @@
   "name": "ikada-site",
   "main": "src/sprout.js",
   "compatibility_date": "2026-08-31",
+  // Served on its own domain only: no <app>.<team>.sproutboat.app address (as Wrangler workers_dev = false; CLI 0.59.0).
+  "workers_dev": false,
   "assets": {
     // built by `bun run build`: the pages under dist/ikada, the registry under dist/ikada/r
     "directory": "dist",
