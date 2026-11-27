@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "react-docgen-typescript": "^2.4.0",
-    "sproutboat": "0.67.0",
+    "sproutboat": "0.67.1",
     "typescript": "5.9"
   }
 }
