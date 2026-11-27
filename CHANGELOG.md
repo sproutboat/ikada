@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+
+- **The desktop `Sidebar` shifted its icons when it overflowed with always-on scrollbars.** A window shorter than the sidebar gave it a 15px scrollbar that narrowed the content box (rail icons moved left 7.5px, header icons 15px). Its own scrollbar is hidden now; wheel, touch and keyboard still scroll it.
+
 ## 0.3.0
 
 The repository moved to [sproutboat/ikada](https://github.com/sproutboat/ikada); the package is published from there with provenance.

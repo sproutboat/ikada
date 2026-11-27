@@ -84,6 +84,19 @@ describe("router link adapter", () => {
     expect(link.getAttribute("aria-current")).toBe("page");
   });
 
+  test("the desktop Sidebar hides its own scrollbar so a classic one cannot shift the icons", () => {
+    const { container } = render(
+      <Sidebar mode="static">
+        <SidebarNav label="Main">
+          <SidebarItem href="/x">Sprouts</SidebarItem>
+        </SidebarNav>
+      </Sidebar>,
+    );
+    const aside = container.querySelector("aside")!;
+    expect(aside.className).toContain("[scrollbar-width:none]");
+    expect(aside.className).toContain("[&::-webkit-scrollbar]:hidden");
+  });
+
   test("PageTab and a Breadcrumbs item accept render", () => {
     render(
       <>

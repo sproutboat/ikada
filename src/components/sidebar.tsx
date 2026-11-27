@@ -107,7 +107,9 @@ export function Sidebar({
       ref={ref}
       data-collapsed={collapsed || undefined}
       className={cn(
-        "flex h-full shrink-0 flex-col gap-1 overflow-y-auto overflow-x-hidden bg-surface p-3 text-fg shadow-[inset_-1px_0_0_var(--sb-hairline)]",
+        // No scrollbar: a classic one would take 15px of the 56px rail or the column whenever a short window makes it
+        // overflow, and every icon would jump. Wheel, touch and keys still scroll it.
+        "flex h-full shrink-0 flex-col gap-1 overflow-y-auto overflow-x-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden bg-surface p-3 text-fg shadow-[inset_-1px_0_0_var(--sb-hairline)]",
         "w-60 transition-[width] duration-(--sb-duration-slide) ease-in-out motion-reduce:transition-none",
         collapsed && "w-14",
         className,
